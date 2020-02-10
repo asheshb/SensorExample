@@ -20,6 +20,8 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         temperatureSensor = sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE)
+
+
         if(temperatureSensor == null){
             ambient_temperature.text = getString(R.string.temperature_sensor_not_found)
         }
